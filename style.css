@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8f7;
+    color: #102a43;
+    padding: 30px;
+}
+
+
+/* MAIN GRID */
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.25fr
+        1.25fr
+        1fr;
+
+    grid-template-rows:
+        auto
+        auto
+        auto;
+
+    gap: 24px;
+}
+
+
+/* COMMON CARD */
+
+.card {
+    border-radius: 22px;
+    padding: 28px;
+    overflow: hidden;
+    position: relative;
+
+    box-shadow:
+        0 12px 30px rgba(16, 42, 67, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 18px 35px rgba(16, 42, 67, 0.13);
+}
+
+
+/* CREATE CARD */
+
+.create-card {
+    background: #fff4e6;
+    min-height: 360px;
+}
+
+.small-label {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ff6b4a;
+}
+
+.create-card h2 {
+    font-size: 34px;
+    line-height: 0.98;
+    margin-top: 35px;
+}
+
+.create-card h2 span {
+    color: #ff6b4a;
+    font-style: italic;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 30px;
+}
+
+.create-card button {
+    background: #ff7a59;
+    color: white;
+    margin-top: 35px;
+}
+
+.plane {
+    position: absolute;
+    right: 35px;
+    bottom: 30px;
+
+    font-size: 65px;
+    transform: rotate(-20deg);
+}
+
+
+/* HERO */
+
+.hero-card {
+    grid-column: span 2;
+
+    min-height: 360px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #063b5c,
+            #087e8b
+        );
+
+    color: white;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.tag {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #ffcf70;
+}
+
+.hero-card h1 {
+    font-size: 48px;
+    line-height: 1.05;
+    margin-top: 20px;
+}
+
+.hero-card h1 span {
+    color: #ffcf70;
+}
+
+.hero-card h1 i {
+    font-weight: normal;
+}
+
+.hero-description {
+    margin-top: 20px;
+    max-width: 530px;
+    line-height: 1.5;
+    color: #d8f3f0;
+}
+
+.stars {
+    margin-top: 25px;
+    color: #ffd166;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+.reviews {
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.sun {
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -70px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: #ff7a59;
+
+    opacity: 0.7;
+}
+
+
+/* DESTINATION */
+
+.destination-card {
+    background: #ffdce5;
+    min-height: 360px;
+}
+
+.destination-card h2 {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.destination-box {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.location-title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.destination-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.destination-list div {
+    text-align: center;
+}
+
+.destination-list span {
+    font-size: 30px;
+}
+
+.destination-list p {
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.bottom-text {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+/* AI / ITINERARY */
+
+.ai-card {
+    background: #c9f1ee;
+    min-height: 370px;
+}
+
+.ai-card h2 {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.ai-card h2 span {
+    color: #008b8b;
+}
+
+.chat-box {
+    margin-top: 25px;
+    background: white;
+    border-radius: 18px;
+    padding: 15px;
+}
+
+.message {
+    padding: 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.user-message {
+    background: #e7f0ff;
+    text-align: right;
+}
+
+.bot-message {
+    background: #fff0dd;
+}
+
+
+/* BOOKINGS */
+
+.accounts-card {
+    background: #ffffff;
+    min-height: 370px;
+}
+
+.mini-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.mini-icons div {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #e8f6f4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+}
+
+.accounts-card h2 {
+    font-size: 30px;
+    margin-top: 30px;
+    line-height: 1.05;
+}
+
+.accounts-card p {
+    margin-top: 18px;
+    color: #61788a;
+    line-height: 1.5;
+}
+
+
+/* SCHEDULE */
+
+.schedule-card {
+    background: #ffe0a6;
+    min-height: 370px;
+}
+
+.schedule-card h2 {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.schedule-card h2 span {
+    color: #e85d3f;
+}
+
+.calendar {
+    background: white;
+    border-radius: 18px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.calendar-header {
+    padding: 15px;
+
+    background: #ff7857;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 11px;
+}
+
+.days {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 15px;
+
+    text-align: center;
+
+    font-size: 9px;
+    color: #758796;
+}
+
+.days b {
+    color: #102a43;
+    font-size: 18px;
+}
+
+.check-row {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 10px;
+}
+
+.check-row span {
+    width: 25px;
+    height: 25px;
+
+    background: #087e8b;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* STATISTICS */
+
+.statistics-card {
+    background: white;
+    min-height: 220px;
+}
+
+.stat-number {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.statistics-card p {
+    margin-top: 5px;
+    color: #60798b;
+}
+
+.traveler-icons {
+    margin-top: 25px;
+    font-size: 35px;
+}
+
+
+/* WEATHER */
+
+.weather-card {
+    background: #e4f1ff;
+    min-height: 220px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-info p {
+    color: #55758d;
+}
+
+.weather-info h2 {
+    font-size: 42px;
+    margin-top: 10px;
+}
+
+.weather-info span {
+    font-size: 14px;
+}
+
+.weather-chart {
+    height: 130px;
+
+    display: flex;
+    align-items: end;
+
+    gap: 8px;
+}
+
+.weather-chart div {
+    width: 13px;
+
+    border-radius: 10px 10px 0 0;
+
+    background: #087e8b;
+}
+
+
+/* FINAL */
+
+.final-card {
+    grid-column: span 2;
+
+    background: linear-gradient(
+        135deg,
+        #7048c6,
+        #a85bd1
+    );
+
+    color: white;
+
+    min-height: 220px;
+}
+
+.budget-box {
+    background: white;
+    color: #102a43;
+
+    width: 220px;
+
+    padding: 20px;
+
+    border-radius: 18px;
+}
+
+.budget-box p {
+    font-size: 11px;
+    color: #718496;
+}
+
+.budget-box h2 {
+    font-size: 27px;
+    margin-top: 5px;
+}
+
+.budget-box span {
+    color: #00a878;
+    font-size: 12px;
+}
+
+.final-heading {
+    position: absolute;
+
+    right: 30px;
+    top: 35px;
+
+    font-size: 30px;
+    line-height: 1;
+}
+
+.final-heading span {
+    color: #ffd166;
+}
+
+.final-card button {
+    position: absolute;
+
+    right: 30px;
+    bottom: 30px;
+
+    background: #ffd166;
+    color: #302050;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-card,
+    .final-card {
+        grid-column: span 2;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card,
+    .final-card {
+        grid-column: span 1;
+    }
+
+    .hero-card h1 {
+        font-size: 35px;
+    }
+
+    .final-heading {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .final-card button {
+        position: static;
+        margin-top: 20px;
+    }
+}
